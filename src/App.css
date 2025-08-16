@@ -7,10 +7,10 @@ h2 {
 }
 
 button {
-  color: hsl(0,0%,20%);
+  color: hsl(0, 0%, 20%);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
-  border: 1px solid hsl(0,0%,20%);
+  border: 1px solid hsl(0, 0%, 20%);
   transition: transform 150ms ease;
 }
 button:active {
@@ -42,7 +42,7 @@ button:active {
     top: 0px;
   }
   50% {
-    top: 200px
+    top: 200px;
   }
   100% {
     top: 0px;
@@ -63,7 +63,7 @@ button:active {
   visibility: hidden;
 }
 .overlay-appear {
-  animation: overlay-appear .2s cubic-bezier(.165,.84,.44,1);
+  animation: overlay-appear 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   visibility: visible;
 }
 .overlay-content-header {
@@ -86,7 +86,7 @@ button:active {
 
 .toast {
   padding: 4px;
-  border: 1px solid hsl(0,0%,20%);
+  border: 1px solid hsl(0, 0%, 20%);
   animation: toast-appear 400ms ease-out;
 }
 
@@ -95,12 +95,26 @@ button:active {
   bottom: 0;
   right: 90px;
 }
+
+.rotated {
+  /* ease-in-out works best for rotating elements. Looks like a car accelerating */
+  animation: 3s ease-in-out infinite button-rotate;
+}
+
+@keyframes button-rotate {
+  from {
+    transfrom: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
-
 
 @keyframes toast-appear {
   from {
@@ -110,4 +124,23 @@ button:active {
   to {
     opacity: 1;
   }
+}
+
+/* StackedComponent */
+.stackedWrapper {
+  display: grid;
+}
+
+.stackedCard {
+  /* local vars for readability */
+  --translate-increment: -13%;
+  --scale-increment: 0.05;
+  width: 356px;
+  height: 74px;
+  box-shadow: 0 4px 12px #0000001a;
+  border: 1px solid #eeeeee;
+  background: white;
+  border-radius: 8px;
+  grid-area: 1 / 1;
+  transform: translate(0px, calc(var(--index) * var(--translate-increment))) scale(calc(1 - var(--index) * var(--scale-increment)));
 }

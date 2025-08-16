@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import ReactLogo from "./assets/react.svg"
 import "./App.css";
+import { StackedComponent } from "./StackedComponent";
 
 function App() {
   const [overlay, setOverlay] = useState(false);
@@ -71,7 +73,20 @@ function App() {
           }}
         >
           Generate toast
-        </button>
+          </button>
+      </section>
+      <section>
+        <h2 className="font-bold">Rotations</h2>
+          <img className="rotated" src={ReactLogo} alt="" />
+      </section>
+
+      <section>
+        <h2 className="font-bold">
+          Stacked component
+        </h2>
+        <div className="p-4">
+          <StackedComponent></StackedComponent>
+        </div>
       </section>
     </>
   );
