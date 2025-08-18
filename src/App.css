@@ -144,3 +144,13 @@ button:active {
   grid-area: 1 / 1;
   transform: translate(0px, calc(var(--index) * var(--translate-increment))) scale(calc(1 - var(--index) * var(--scale-increment)));
 }
+
+/* Transitions */
+.ball-child {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.ball:hover .ball-child {
+  /* Outer element allows to remove flickering */
+  transform: translateY(-20%);
+}

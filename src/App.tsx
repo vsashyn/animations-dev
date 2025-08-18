@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import ReactLogo from "./assets/react.svg"
+import ReactLogo from "./assets/react.svg";
 import "./App.css";
 import { StackedComponent } from "./StackedComponent";
 
@@ -73,21 +73,24 @@ function App() {
           }}
         >
           Generate toast
-          </button>
+        </button>
       </section>
       <section>
         <h2 className="font-bold">Rotations</h2>
-          <img className="rotated" src={ReactLogo} alt="" />
+        <img className="rotated" src={ReactLogo} alt="" />
       </section>
 
       <section>
-        <h2 className="font-bold">
-          Stacked component
-        </h2>
+        <h2 className="font-bold">Stacked component</h2>
         <div className="p-4">
           <StackedComponent></StackedComponent>
         </div>
       </section>
+
+      <h2 className="font-bold">Transition</h2>
+      <div className="ball inline-block">
+        <div className="ball-child w-16 h-16 rounded-full bg-amber-200"></div>
+      </div>
     </>
   );
 }
