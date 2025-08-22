@@ -154,3 +154,24 @@ button:active {
   /* Outer element allows to remove flickering */
   transform: translateY(-20%);
 }
+/* Card hover */
+.card {
+  box-shadow: 0 4px 12px #0000001a;
+  overflow: hidden;
+  text-decoration: none;
+}
+.card-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+.card-description {
+  transform: translateY(110%);
+  transition: transform 300ms ease;
+}
+/* focus-visible enables this for users who navigates using keyboard */
+.card:hover, .card:focus-visible {
+  .card-description {
+    transform: translateY(0px);
+  }
+}
