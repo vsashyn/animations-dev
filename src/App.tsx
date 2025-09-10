@@ -14,6 +14,7 @@ function App() {
         <h2 className="font-bold">Overlay</h2>
         <p>Overlay for modal</p>
         <button
+          className="rounded-md"
           onClick={() => {
             setOverlay(!overlay);
           }}
@@ -23,6 +24,7 @@ function App() {
         <motion.div className={`overlay ${overlay ? "overlay-appear" : ""}`}>
           <div className="overlay-content-header">
             <button
+              className="rounded-md"
               onClick={() => {
                 setOverlay(!overlay);
               }}
@@ -68,6 +70,7 @@ function App() {
         </section>
 
         <button
+          className="rounded-md"
           onClick={() => {
             setToasts([...toasts, "Hello toast"]);
           }}
@@ -93,7 +96,10 @@ function App() {
       </div>
 
       <h2 className="font-bold">Card hover</h2>
-      <a className="card flex items-end w-44 h-56 border-1 border-gray-200 rounded-2xl p-1 text-black" tabIndex={0}>
+      <a
+        className="card flex items-end w-44 h-56 border-1 border-gray-200 rounded-2xl p-1 text-black"
+        tabIndex={0}
+      >
         <div className="card-description w-full border-1 border-gray-200 rounded-2xl p-3 bg-gray-50 text-black text-xs">
           <p className="font-semibold">Project name</p>
           <p className="text-gray-400">Project description</p>
@@ -113,6 +119,37 @@ function App() {
           </svg>
         </div>
       </a>
+      <h2 className="font-bold">Download arrow</h2>
+      <button className="download-btn w-8 h-8 flex flex-col items-center justify-center rounded-full overflow-hidden">
+        <div className="download-arr-one">
+          <svg
+            className="block"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 25 25"
+          >
+            <path
+              style={{ fill: "#232326" }}
+              d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"
+            />
+          </svg>
+        </div>
+        <div className="download-arr-two">
+          <svg
+            className="block"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 25 25"
+          >
+            <path
+              style={{ fill: "#232326" }}
+              d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"
+            />
+          </svg>
+        </div>
+      </button>
     </>
   );
 }
