@@ -3,10 +3,10 @@ import { motion } from "motion/react";
 import ReactLogo from "./assets/react.svg";
 import "./App.css";
 import { StackedComponent } from "./StackedComponent";
+import Toasts from "./components/Toasts";
 
 function App() {
   const [overlay, setOverlay] = useState(false);
-  const [toasts, setToasts] = useState<string[]>([]);
 
   return (
     <>
@@ -56,27 +56,6 @@ function App() {
         <div className="translate-10-10">
           This text is transformed using `transform: translate(10%, 10%);`
         </div>
-      </section>
-      <section>
-        <h2 className="font-bold">Buttons</h2>
-        <section className="section-wrap bg-amber-50">
-          <div className="toasts">
-            {toasts.map((toast, index) => (
-              <div key={index} className="toast">
-                {toast} {index}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <button
-          className="rounded-md"
-          onClick={() => {
-            setToasts([...toasts, "Hello toast"]);
-          }}
-        >
-          Generate toast
-        </button>
       </section>
       <section>
         <h2 className="font-bold">Rotations</h2>
@@ -150,6 +129,8 @@ function App() {
           </svg>
         </div>
       </button>
+      <h2 className="font-bold">Generate a toast</h2>
+      <Toasts></Toasts>
     </>
   );
 }

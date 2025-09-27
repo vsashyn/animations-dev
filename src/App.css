@@ -85,12 +85,6 @@ button:active {
   transform: translate(10%, 10%);
 }
 
-.toast {
-  padding: 4px;
-  border: 1px solid hsl(0, 0%, 20%);
-  animation: toast-appear 400ms ease-out;
-}
-
 .section-wrap {
   position: absolute;
   bottom: 0;
@@ -114,16 +108,6 @@ button:active {
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes toast-appear {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }
 
