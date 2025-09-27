@@ -8,11 +8,11 @@
     flex-direction: column;
 }
 .toast-new {
-    --toast-height: -70px;
+    --gap: 10px;
     position: absolute;
     animation: toast-fade-in 0.3s ease-in-out;
     transition: transform 300ms ease-out;
-    transform: translateY(calc(var(--index) * var(--toast-height)));
+    transform: translateY(calc(var(--index) * (100% + var(--gap)) * -1));
 }
 
 @keyframes toast-fade-in {

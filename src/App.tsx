@@ -3,7 +3,8 @@ import { motion } from "motion/react";
 import ReactLogo from "./assets/react.svg";
 import "./App.css";
 import { StackedComponent } from "./StackedComponent";
-import Toasts from "./components/Toasts";
+import ToastAnimated from "./components/ToastAnimated";
+import ToastTransitioned from "./components/ToastTransitioned";
 
 function App() {
   const [overlay, setOverlay] = useState(false);
@@ -129,8 +130,10 @@ function App() {
           </svg>
         </div>
       </button>
-      <h2 className="font-bold">Generate a toast</h2>
-      <Toasts></Toasts>
+      <h2 className="font-bold">Generate a toast (Animation)</h2>
+      <ToastAnimated></ToastAnimated>
+      <h2 className="font-bold">Generate a toast (Transition)</h2>
+      <ToastTransitioned></ToastTransitioned>
     </>
   );
 }
