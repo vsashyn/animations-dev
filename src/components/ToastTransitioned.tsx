@@ -19,9 +19,8 @@ const ToastTransitioned: React.FC = () => {
                     return (
                         <div
                             key={i}
-                            className={`toast-new2 w-lg border-1 p-4 bg-white rounded-xl shadow-md border-gray-100 ${
-                                visibleToasts.has(i) ? "visible" : ""
-                            }`}
+                            data-mounted={visibleToasts.has(i)}
+                            className={`toast-transitioned w-lg border-1 p-4 bg-white rounded-xl shadow-md border-gray-100`}
                             style={{
                                 "--index": toasts - i,
                             }}
