@@ -5,6 +5,7 @@ import "./App.css";
 import { StackedComponent } from "./StackedComponent";
 import ToastAnimated from "./components/ToastAnimated";
 import ToastTransitioned from "./components/ToastTransitioned";
+import TextReveal from "./components/TextReveal";
 
 function App() {
   const [overlay, setOverlay] = useState(false);
@@ -134,6 +135,8 @@ function App() {
       <ToastAnimated></ToastAnimated>
       <h2 className="font-bold">Generate a toast (Transition)</h2>
       <ToastTransitioned></ToastTransitioned>
+      <h2 className="font-bold">Text reveal</h2>
+      <TextReveal></TextReveal>
     </>
   );
 }

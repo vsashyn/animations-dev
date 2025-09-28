@@ -1,0 +1,25 @@
+.reveal-el {
+    display: inline-block;
+    animation: show-up 300ms ease-in;
+    animation-delay: calc(var(--delay) * 1ms);
+    transform: translateY(100%);
+    animation-fill-mode: forwards;
+}
+
+@keyframes show-up {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.reveal-header {
+    min-height: 24px;
+    overflow: hidden;
+}
+.reset-btn {
+    margin-top: 16px;
+}
