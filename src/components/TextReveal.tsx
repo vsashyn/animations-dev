@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./TextReveal.css";
 
-const DELAY = 20;
+const DELAY = 30;
 
 export default function TextReveal() {
     const [reset, setReset] = useState(0);

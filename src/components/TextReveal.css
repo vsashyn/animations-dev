@@ -1,21 +1,22 @@
 .reveal-el {
     display: inline-block;
-    animation: show-up 300ms ease-in;
+    animation: show-up 1s cubic-bezier(0.19, 1, 0.22, 1);
     animation-delay: calc(var(--delay) * 1ms);
-    transform: translateY(100%);
     animation-fill-mode: forwards;
+    transform: translateY(100%);
 }
 
 @keyframes show-up {
-    0% {
+    from {
         opacity: 0;
     }
 
-    100% {
+    to {
         transform: translateY(0px);
         opacity: 1;
     }
 }
+
 .reveal-header {
     min-height: 24px;
     overflow: hidden;
