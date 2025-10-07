@@ -1,0 +1,26 @@
+.wrap {
+    width: 50%;
+    height: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.wrap:hover {
+    .content {
+        animation-play-state: paused;
+    }
+}
+.content {
+    position: absolute;
+    animation: marquee 5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(300%);
+    }
+}
+

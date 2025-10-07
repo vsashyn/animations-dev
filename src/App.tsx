@@ -6,6 +6,7 @@ import { StackedComponent } from "./StackedComponent";
 import ToastAnimated from "./components/ToastAnimated";
 import ToastTransitioned from "./components/ToastTransitioned";
 import TextReveal from "./components/TextReveal";
+import { Marquee } from "./components/Marquee";
 
 function App() {
   const [overlay, setOverlay] = useState(false);
@@ -137,6 +138,8 @@ function App() {
       <ToastTransitioned></ToastTransitioned>
       <h2 className="font-bold">Text reveal</h2>
       <TextReveal></TextReveal>
+      <h2 className="font-bold">Marquee</h2>
+      <Marquee></Marquee>
     </>
   );
 }
