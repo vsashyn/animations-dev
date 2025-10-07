@@ -7,6 +7,7 @@ import ToastAnimated from "./components/ToastAnimated";
 import ToastTransitioned from "./components/ToastTransitioned";
 import TextReveal from "./components/TextReveal";
 import { Marquee } from "./components/Marquee";
+import { Orbiting } from "./components/Orbiting";
 
 function App() {
   const [overlay, setOverlay] = useState(false);
@@ -140,6 +141,8 @@ function App() {
       <TextReveal></TextReveal>
       <h2 className="font-bold">Marquee</h2>
       <Marquee></Marquee>
+      <h2 className="font-bold">3D Orbiting animation</h2>
+      <Orbiting></Orbiting>
     </>
   );
 }

@@ -1,0 +1,28 @@
+.o-wrap {
+    /* responsible for perspective to the small element - makes it bigger and smaller */
+    perspective: 400px;
+    /* keeps 3D */
+    transform-style: preserve-3d;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+}
+.small {
+    position: absolute;
+    top: 50%;
+    animation: rotation 3s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+    0% {
+        /* rotateY overrides themselves, translateZ increases distance from Y axis */
+        transform: translate(-50%, -50%) rotateY(0deg) translateZ(100px)
+            rotateY(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateY(360deg) translateZ(100px)
+            rotateY(0deg);
+    }
+}
